@@ -26,9 +26,6 @@ options.add_argument("--disable-dev-shm-usage")
 
 driver = webdriver.Chrome(options=options)
 
-from selenium.webdriver.chrome.options import Options
-
-
 # Fixture method - to open web browser
 def setUp():
     # Make a full screen

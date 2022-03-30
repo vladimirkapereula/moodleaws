@@ -3,8 +3,7 @@
 ### Initial EC2 Installation on AWS
 ```
 sudo apt-get update
-...
-...
+
 sudo apt-get upgrade
 ```
 
@@ -26,7 +25,15 @@ sudo apt-get install unzip
 sudo apt-get update
 sudo unzip chromedriver_linux64.zip
 sudo mv chromedriver /usr/bin/chromedriver
+
 chromedriver – version
+------------this command sometimes cause that GitBush do not respond with 
+prompting you for next command. In this case just close and reopen GitBush, 
+and re-start the instance in AWS. Re-run the command
+Connect to your instance using its Public DNS: ec2-3-96-132-29.ca-central-1.compute.amazonaws.com
+Example:
+ ssh -i "vpereula.pem" ubuntu@ec2-3-96-132-29.ca-central-1.compute.amazonaws.com,
+ and continue with command in next step ---------------------------------- 
 ```
 
 ### Install Java 11 (will be used by Jenkins)
@@ -65,8 +72,15 @@ sudo systemctl status jenkins
 ### Check Python3 version
 ```
 python3 —version
-```
 
+------------this command sometimes cause that GitBush do not respond with 
+prompting you for next command. In this case just close and reopen GitBush, 
+and re-start the instance in AWS. Re-run the command
+Connect to your instance using its Public DNS: ec2-3-96-132-29.ca-central-1.compute.amazonaws.com
+Example:
+ ssh -i "vpereula.pem" ubuntu@ec2-3-96-132-29.ca-central-1.compute.amazonaws.com,
+ and continue with command in next step ---------------------------------- 
+```
 ### If Python3 is not installed
 ```
 sudo apt update
