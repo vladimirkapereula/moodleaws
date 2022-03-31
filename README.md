@@ -1,9 +1,10 @@
-# Selenium, AWS, Python, Jenkins, Git Integration
+# Selenium, AWS, Python, Jenkins, Git, Moodle Integration
 
 ### Initial EC2 Installation on AWS
 ```
 sudo apt-get update
-
+```
+```
 sudo apt-get upgrade
 ```
 
@@ -16,7 +17,7 @@ sudo dpkg -i google-chrome*.deb
 sudo apt-get install -f
 google-chrome --version
 ```
-
+```
 ### Install ChromeDriver Binary for Linux
 ```
 sudo apt-get update
@@ -25,26 +26,23 @@ sudo apt-get install unzip
 sudo apt-get update
 sudo unzip chromedriver_linux64.zip
 sudo mv chromedriver /usr/bin/chromedriver
-
-chromedriver – version
-------------this command sometimes cause that GitBush do not respond with 
-prompting you for next command. In this case just close and reopen GitBush, 
-and re-start the instance in AWS. Re-run the command
-Connect to your instance using its Public DNS: ec2-3-96-132-29.ca-central-1.compute.amazonaws.com
-Example:
- ssh -i "vpereula.pem" ubuntu@ec2-3-96-132-29.ca-central-1.compute.amazonaws.com,
- and continue with command in next step ---------------------------------- 
 ```
 
+chromedriver --version
+---this check for version command sometimes cause that GitBush do not respond with 
+prompting you for next command. Use Ctrl+C to get to command line again.
+----------------------------------------------------------------------------------
+```
+```
 ### Install Java 11 (will be used by Jenkins)
 ```
 sudo apt update
 sudo apt search openjdk
 sudo apt install openjdk-11-jdk
 sudo apt install openjdk-11-jdk
-java -version
+java --version
 ```
-
+```
 ### Install Jenkins 
 ```
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
@@ -58,12 +56,12 @@ sudo apt-get update
 sudo apt-get install jenkins
 cat /var/lib/jenkins/config.xml
 ```
-
+```
 ### Check Jenkins status (should be green and Active)
 ```
 sudo systemctl status jenkins
 ```
-
+```
 ### If Jenkins status is Inactive
 ```
 sudo systemctl start jenkins
@@ -71,15 +69,11 @@ sudo systemctl status jenkins
 ```
 ### Check Python3 version
 ```
-python3 —version
+python3 --version
 
-------------this command sometimes cause that GitBush do not respond with 
-prompting you for next command. In this case just close and reopen GitBush, 
-and re-start the instance in AWS. Re-run the command
-Connect to your instance using its Public DNS: ec2-3-96-132-29.ca-central-1.compute.amazonaws.com
-Example:
- ssh -i "vpereula.pem" ubuntu@ec2-3-96-132-29.ca-central-1.compute.amazonaws.com,
- and continue with command in next step ---------------------------------- 
+---this check for version command sometimes cause that GitBush do not respond with 
+prompting you for next command. Use Ctrl+C to get to command line again.
+----------------------------------------------------------------------------------
 ```
 ### If Python3 is not installed
 ```
@@ -127,8 +121,8 @@ sudo apt-get install git -y
 ### Open Jenkins —> go to Manage Plugins (check the availability)
 ```
 Credentials Plugin 
-...
-...
+```
+```
 Git plugin
 ```
 
@@ -157,7 +151,7 @@ fi
 . venv/bin/activate
 pip3 install faker
 pip3 install selenium
-cd /var/lib/jenkins/workspace/[Project_Name[name from Jeninks]/
+cd /var/lib/jenkins/workspace/[Project_Name[file name from Jeninks]/
 python3 -m unittest discover --pattern=moodle_tests.py
 deactivate
 ```
