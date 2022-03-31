@@ -58,7 +58,7 @@ sudo apt-get update
 sudo apt-get install jenkins
 cat /var/lib/jenkins/config.xml
 ```
-```
+
 ### Check Jenkins status (should be green and Active)
 ```
 sudo systemctl status jenkins
