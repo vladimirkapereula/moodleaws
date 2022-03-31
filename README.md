@@ -17,7 +17,7 @@ sudo apt-get install -f
 sudo dpkg -i google-chrome*.deb
 sudo apt-get install -f
 google-chrome --version
-
+```
 
 ### Install ChromeDriver Binary for Linux
 ```
@@ -29,9 +29,9 @@ sudo unzip chromedriver_linux64.zip
 sudo mv chromedriver /usr/bin/chromedriver
 
 chromedriver --version
-			# this command,"check for version" sometimes cause that GitBush do not respond with 
-			prompting you for next command. Use Ctrl+C to get to command line again.
-----------------------------------------------------------------------------------------------------
+			---this command,"check for version" sometimes cause that GitBush do not respond with 
+			   prompting you for next command. Use Ctrl+C to get to command line again.
+
 ```
 
 ### Install Java 11 (will be used by Jenkins)
@@ -48,13 +48,16 @@ java --version
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 ```
+```
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 ```
+```
 sudo apt-get update
 sudo apt-get install jenkins
 cat /var/lib/jenkins/config.xml
+```
 ```
 ### Check Jenkins status (should be green and Active)
 ```
@@ -71,7 +74,6 @@ sudo systemctl status jenkins
 python3 --version
 			# this command,"check for version" sometimes cause that GitBush do not respond with 
 			prompting you for next command. Use Ctrl+C to get to command line again.
-----------------------------------------------------------------------------------------------------
 ```
 ### If Python3 is not installed
 ```
@@ -113,8 +115,7 @@ sudo apt-get install git -y
 ### Open Jenkins —> go to Manage Plugins (check the availability)
 ```
 Credentials Plugin 
-```
-```
+
 Git plugin
 ```
 ### Make Jenkins & Git integration (using Terminal or CMD)
@@ -131,7 +132,9 @@ cat /home/ubuntu/.ssh/id_rsa.pub
 ```
 
 ### General Moodle Selenium Script
-#Setup a proper path, I call my virtualenv dir "venv", and  I've got the virtualenv command installed in /usr/local/bin
+```
+---Setup a proper path, I call my virtualenv dir "venv", and  I've got the virtualenv command installed in /usr/local/bin
+```
 ```
 PATH=${PATH}:/usr/local/bin
 if [ ! -d "venv" ]; then
