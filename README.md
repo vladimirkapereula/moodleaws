@@ -157,7 +157,7 @@ fi
 . venv/bin/activate
 pip3 install faker
 pip3 install selenium
-cd /var/lib/jenkins/workspace/PythonSeleniumMoodle/
+cd /var/lib/jenkins/workspace/[Project_Name[name from Jeninks]/
 python3 -m unittest discover --pattern=moodle_tests.py
 deactivate
 ```
