@@ -17,7 +17,7 @@ sudo dpkg -i google-chrome*.deb
 sudo apt-get install -f
 google-chrome --version
 ```
-```
+
 ### Install ChromeDriver Binary for Linux
 ```
 sudo apt-get update
@@ -26,13 +26,11 @@ sudo apt-get install unzip
 sudo apt-get update
 sudo unzip chromedriver_linux64.zip
 sudo mv chromedriver /usr/bin/chromedriver
-```
 
 chromedriver --version
----this check for version command sometimes cause that GitBush do not respond with 
-prompting you for next command. Use Ctrl+C to get to command line again.
-----------------------------------------------------------------------------------
-```
+			# this command,"check for version" sometimes cause that GitBush do not respond with 
+			prompting you for next command. Use Ctrl+C to get to command line again.
+----------------------------------------------------------------------------------------------------
 ```
 ### Install Java 11 (will be used by Jenkins)
 ```
@@ -41,7 +39,6 @@ sudo apt search openjdk
 sudo apt install openjdk-11-jdk
 sudo apt install openjdk-11-jdk
 java --version
-```
 ```
 ### Install Jenkins 
 ```
@@ -56,12 +53,12 @@ sudo apt-get update
 sudo apt-get install jenkins
 cat /var/lib/jenkins/config.xml
 ```
-```
+
 ### Check Jenkins status (should be green and Active)
 ```
 sudo systemctl status jenkins
 ```
-```
+
 ### If Jenkins status is Inactive
 ```
 sudo systemctl start jenkins
@@ -70,10 +67,9 @@ sudo systemctl status jenkins
 ### Check Python3 version
 ```
 python3 --version
-
----this check for version command sometimes cause that GitBush do not respond with 
-prompting you for next command. Use Ctrl+C to get to command line again.
-----------------------------------------------------------------------------------
+			# this command,"check for version" sometimes cause that GitBush do not respond with 
+			prompting you for next command. Use Ctrl+C to get to command line again.
+----------------------------------------------------------------------------------------------------
 ```
 ### If Python3 is not installed
 ```
@@ -142,7 +138,7 @@ cat /home/ubuntu/.ssh/id_rsa.pub
 ```
 
 ### General Moodle Selenium Script
-Setup a proper path, I call my virtualenv dir "venv", and  I've got the virtualenv command installed in /usr/local/bin
+#Setup a proper path, I call my virtualenv dir "venv", and  I've got the virtualenv command installed in /usr/local/bin
 ```
 PATH=${PATH}:/usr/local/bin
 if [ ! -d "venv" ]; then
